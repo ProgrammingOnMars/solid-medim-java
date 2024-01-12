@@ -18,7 +18,7 @@ public class DriverTable{
         }
         return INSTANCE;
     }
-    public void loadTable() {
+    public void create() {
         try  {
             Statement statement = connection.createStatement();
             statement.executeUpdate("CREATE TABLE IF NOT EXISTS drivers (id UUID PRIMARY KEY, name VARCHAR(255), work_region VARCHAR(255), vehicle_type VARCHAR(255))");

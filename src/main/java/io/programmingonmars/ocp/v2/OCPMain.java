@@ -3,6 +3,7 @@ package io.programmingonmars.ocp.v2;
 import io.programmingonmars.ocp.v2.calculators.BikeRouteCalculator;
 import io.programmingonmars.ocp.v2.calculators.CarRouteCalculator;
 import io.programmingonmars.ocp.v2.calculators.MotorcycleRouteCalculator;
+import io.programmingonmars.ocp.v2.calculators.VanRouteCalculator;
 
 public class OCPMain {
     public static void main(String[] args) {
@@ -13,6 +14,9 @@ public class OCPMain {
         System.out.println("Car route: " + carRouteCalculator.calculate());
 
         RouteCalculator motorcycleRouteCalculator = new RouteCalculator(new MotorcycleRouteCalculator(), 10.0);
+        System.out.println("Motorcycle route: " + motorcycleRouteCalculator.calculate());
+
+        RouteCalculator vanCalc = new RouteCalculator(new VanRouteCalculator(), 10.0);
         System.out.println("Motorcycle route: " + motorcycleRouteCalculator.calculate());
 
     }
